@@ -1,8 +1,8 @@
 
 .wrapper{
   width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(135deg, #000000dc 0%, #000000a2 0%,rgba(255, 255, 255, 0.16) 100%), url("../../assets/images/header-bg.jpg");
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.215), rgba(0, 0, 0, 0.484),rgba(0, 0, 0, 0.747)), url("../../assets/images/header-bg1.webp");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,13 +24,39 @@
         line-height: 60px;
         font-weight: 900;
         text-transform: uppercase;
+        line-height: 70px;
+
+        @media (max-width:995px){
+          font-size: 50px;
+          line-height: 50px;
+        }
+
+        @media (max-width:767px){
+          font-size: 40px;
+          line-height: 45px;
+        }
+
+        @media (max-width:550px){
+          font-size: 32px;
+          line-height: 35px;
+        }
+
+        @media (max-width:370px){
+          font-size: 28px;
+        }
       }
+      
 
       .header__text{
         font-size: 20px;
         font-weight: 300;
         color: var(--white-color);
         margin-bottom: 50px;
+
+        @media (max-width:370px){
+          margin-bottom: 30px;
+          font-size: 16px;
+        }
       }
 
       .header__btn{
@@ -63,6 +89,14 @@
         &:hover::after{
           left: 100%;
         }
+
+        @media (max-width:370px){
+          padding: 15px 40px;
+        }
+      }
+
+      @media (max-width:767px){
+        padding-top: 110px;
       }
     }
   }
