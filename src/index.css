@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 :root {
   --font-family-body: "Roboto", "Arial", sans-serif;
   --main-color: #f1234a;
@@ -64,6 +66,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  font-family: Popins,sans-serif;
 }
 
 body {

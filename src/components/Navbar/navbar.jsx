@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./navbar.module.scss";
 import Logo from "../../assets/images/logo.png";
 import WhatsApp from "../../assets/icons/whatsapp1.gif";
