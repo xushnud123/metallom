@@ -1,6 +1,6 @@
 .wrapper{
   padding: 30px 0 50px 0;
-  transition: all .3s linear;
+  transition: all .5s linear;
   
   .container{
     width: 100%;
@@ -16,6 +16,9 @@
       .logo{
         @media (max-width:950px) {
           width: 190px;
+        }
+        @media (max-width:440px) {
+          width: 120px;
         }
       }
 
@@ -38,6 +41,10 @@
             transition: all 0.2s linear;
             padding-bottom: 2.5px;
 
+            &:hover{
+              color: var(--main-color);
+            }
+
             @media (max-width:950px) {
               font-size: 16px;          
             }
@@ -55,20 +62,21 @@
 
           @media  (max-width:755px){
             margin-bottom :35px;
-          }
+          }     
         }
 
-        .nav__item:not(:first-child){
-          margin-left: 50px;
+        .nav__item:not(:last-child){
+          margin-right: 50px;
 
           @media (max-width:1000px) {
-            margin-left: 30px;
+            margin-right: 30px;
           }
           @media (max-width:950px) {
-            margin-left: 15px;
+            margin-right: 15px;
           }
-          
         }
+
+        
 
         @media  (max-width:755px) {
           width: 75%;
@@ -76,13 +84,21 @@
           align-items: center;
           flex-direction: column;
           background-color: rgba(0, 0, 0, 0.927);
-          position: absolute;
+          position: fixed;
+          transform: translateX(100%);
           right: 0;
-          top: 100px;
+          top: 0;
           height: 100vh;
-          padding-top: 50px;
+          padding-top: 120px;
+          transition: all 0.4s linear;
+          z-index: 10;
         }
 
+      }
+
+      .nav__list_hide{
+        transform: translateX(0%);
+        transition: all 0.4s linear;
       }
 
       .nav__actions{
@@ -92,6 +108,10 @@
           transition: transform .2s linear;
           &:hover{
             transform: scale(1.1);
+          }
+
+          @media (max-width:440px){
+            width: 35px;
           }
         }
         .socials:not(:first-child){
@@ -109,18 +129,44 @@
           font-size: 30px;
           color: #fff;
         }
+
+
+        @media (max-width:750px){
+          display: block;
+        }
+      }
+      .burgerBtnClose{
+        display: none;
+        transform: translate(130px, -80px);
+        .btn{
+          font-size: 30px;
+          color: #fff;
+        }
+
+
+        @media (max-width:750px){
+          display: block;
+        }
+
+        @media  (max-width:370px) {
+          transform: translate(97px, -84px);
+        }
       }
      }
+  }
+
+  @media (max-width:767px){
+    padding-bottom: 30px;
   }
 }
 
 .wrapper_change{
-  padding: 10px 0;
+  padding: 15px 0;
   position: fixed;
   z-index: 9999;
   width: 100%;
   top: 0;
   left: 0;
   background-color: #000;
-  transition: all .3s linear;
+  transition: all .5s linear;
 }
