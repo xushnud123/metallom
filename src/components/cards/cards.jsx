@@ -1,14 +1,13 @@
 import classes from "./cards.module.scss";
-import img from "../../assets/images/header-bg.jpg";
-
-const arr = [1, 2, 3, 4, 5, 6];
+import img from "../../assets/images/pexels-pixabay-162534.jpg";
 
 const Cards = ({todos}) => {
   return (
     <div className={classes.wrapper}>
+      <h1 className={classes.name}>Продукты, которые мы покупаем и продаем.</h1>
       <div className={classes.cards}>
         {todos.map((item) => (
-          <div key={item} className={classes.card}>
+          <div key={item.title} className={classes.card}>
             <div className={classes.header}>
               <img src={img} alt="img not found" />
             </div>
@@ -18,7 +17,8 @@ const Cards = ({todos}) => {
                 <p className={classes.price}>цена: {item.number}₽</p>
               </div>
               <p className={classes.date}>
-                <span>Время:&nbsp;</span>{item.date}.{item?.month}.{item.year}
+                <span>Время:&nbsp;</span>
+                {item.date}.{item?.month}.{item.year}
               </p>
             </div>
           </div>

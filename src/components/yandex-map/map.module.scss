@@ -3,8 +3,10 @@
   box-sizing: border-box;
   padding: 0 30px;
   max-width: 1360px;
-  margin: 100px auto 100px auto ;
+  margin: 100px auto 100px auto;
   .title {
+    width: 100%;
+    box-sizing: border-box;
     font-size: 42px;
     line-height: 56px;
     font-weight: 700;
@@ -13,23 +15,92 @@
     span {
       color: #36dbe5;
     }
+    @media screen and (max-width: 576px) {
+      padding: 0 30px;
+      font-size: 30px;
+      line-height: 46px;
+    }
   }
-  p{
+  p {
+    width: 100%;
+    box-sizing: border-box;
     font-size: 25px;
     line-height: 30px;
     color: #000;
-    margin-top: 30px;
-    span{
-        margin-top: 20px;
-        display: block;
-        opacity: 0.6;
+    margin-top: 50px;
+    span {
+      margin-top: 20px;
+      display: block;
+      opacity: 0.6;
+    }
+    @media screen and (max-width: 576px) {
+      padding: 0 30px;
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
     }
   }
   .map {
-    margin-top: 60px;
+    box-sizing: border-box;
+    margin-top: 100px;
     width: 100%;
     height: 600px;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    @media screen and (max-width: 576px) {
+      height: 450px;
+      margin-top: 60px;
+      padding: 0;
+    }
+    .cart {
+      height: 600px !important;
+      @media screen and (max-width: 576px) {
+        height: 450px !important;
+      }
+    }
+    .row {
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      transition: all linear 0.225s;
+      .btn{
+        width: 100%;
+        margin-top: 40px;
+        margin-right: 50px;
+        display: flex;
+        justify-content: flex-end;
+        color: #fff;
+        font-size: 35px;
+        svg{
+          width: 35px;
+          cursor: pointer;
+        }
+      }
+      &.active{
+        display: none;
+      }
+    }
+    &:hover {
+      .row {
+        background: rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding: 0;
+  }
+}
+
+:global(.ymaps-2-1-79-map) {
+  height: 600px !important;
+  width: 100% !important;
+  @media screen and (max-width: 576px) {
+    height: 450px !important;
   }
 }

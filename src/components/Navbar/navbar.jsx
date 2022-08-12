@@ -43,7 +43,6 @@ const Navbar = () => {
           <div className={classes.logo}>
             <img src={Logo} alt="img not found" />
           </div>
-
           <ul className={cx(classes.nav__list, open && classes.nav__list_hide)}>
             {active.navLinks.map(({ id, name }) => {
               return (

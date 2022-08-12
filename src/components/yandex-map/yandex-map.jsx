@@ -1,9 +1,12 @@
-import React from "react";
-import { YMaps, Map, Circle } from "react-yandex-maps";
+import React,{useState} from "react";
+import cx from 'classnames'
+import { YMaps, Map} from "react-yandex-maps";
+import { CgClose } from "react-icons/cg";
 import classes from "./map.module.scss";
 
-
 const YandexMap = () => {
+  const [active,setActive] = useState(false)
+
   return (
     <div className={classes.wrapper}>
       <h1 className={classes.title}>
@@ -15,16 +18,23 @@ const YandexMap = () => {
         <span>2) в Московской области</span>
       </p>
       <div className={classes.map}>
-        <YMaps>
-          <div>
-            <Map
-              width={"100%"}
-              height={600}
-              defaultState={{ center: [55.75, 37.57], zoom: 9 }}
-            >
-              {/* <Circle /> */}
-            </Map>
+        <div className={cx(classes.row, active && classes.active)}>
+          <div className={classes.btn}>
+            <CgClose
+              className={classes.btn}
+              onClick={() => setActive(!active)}
+            />
           </div>
+        </div>
+        <YMaps>
+          <Map
+            width={"100%"}
+            className={classes.cart}
+            // height={600}
+            defaultState={{ center: [55.75, 37.57], zoom: 6 }}
+          >
+           
+          </Map>
         </YMaps>
       </div>
     </div>
