@@ -1,6 +1,12 @@
 .wrapper {
   padding: 10px 0 ;
   transition: all 0.5s linear;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   .container {
     width: 100%;
     max-width: 1360px;
@@ -13,8 +19,8 @@
       justify-content: space-between;
       .logo {
         img {
-          width: 80px;
-          height: 80px;
+          width: 70px;
+          height: 70px;
           object-fit: cover;
           transition: all 0.5s linear;
           @media (max-width: 950px) {
@@ -30,16 +36,51 @@
         }
       }
 
+      .nav__right{
+        display: flex;
+        align-items: center;
+
+        .communication{
+          display: flex;
+          align-items: center;
+          margin-left: 60px;
+          .link{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            color: #000;
+            white-space: nowrap;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            transition: all .3s linear;
+
+            &:hover{
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+            &:last-child{
+              margin-left: 15px;
+            }
+          }
+
+          @media (max-width:400px) {
+            margin-right: 20px;
+          }
+        }
+      }
+
       .nav__list {
         display: flex;
         align-items: center;
         list-style-type: none;
         padding: 0;
         position: relative;
-        z-index: 11;
+        z-index: 100;
         .nav__item {
           .nav__link {
-            font-size: 24px;
+            font-size: 18px;
             line-height: 30px;
             font-weight: normal;
             letter-spacing: 1px;
@@ -84,19 +125,18 @@
           }
         }
         @media (max-width: 755px) {
-          box-shadow:rgba(0, 0, 0, 0.35) 0px 10px 15px -15px inset;
           width: 75%;
-          height: calc(100% - 83.5px);
+          height: calc(100% - 78px);
           flex-direction: column;
           background-color: #fff;
           position: fixed;
           transform: translateX(100%);
           right: 0;
-          top: 83.5px;
+          top: 78px;
           display: flex;
           justify-content: center;
           transition: all 0.4s linear;
-          z-index: 10;
+          z-index: 100;
         }
       }
 
@@ -176,8 +216,8 @@
     .navbar{
       .logo{
         img{
-          width: 70px;
-          height: 70px;
+          width: 65px;
+          height: 65px;
         }
       }
     }

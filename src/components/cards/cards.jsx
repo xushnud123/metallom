@@ -1,7 +1,7 @@
 import classes from "./cards.module.scss";
-import img from "../../assets/images/pexels-pixabay-162534.jpg";
+import img from "../../assets/images/header-img-3.jpg";
 
-const Cards = ({todos}) => {
+const Cards = ({ todos }) => {
   return (
     <div className={classes.wrapper}>
       <h1 className={classes.name}>Продукты, которые мы покупаем и продаем.</h1>
