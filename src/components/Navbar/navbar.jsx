@@ -1,31 +1,25 @@
 import React, { useState } from "react";
+import cx from "classnames";
 import classes from "./navbar.module.scss";
-import Logo from "../../assets/images/logo.png";
-import WhatsApp from "../../assets/icons/whatsapp.svg";
-import Telegram from "../../assets/icons/telegram.svg";
-import Phone from "../../assets/icons/phone.svg";
+import Logo from "../../assets/images/Union.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
 
 const Navbar = () => {
-  const [changeBtn, setChangeBtn] = useState(false);
-  const [addClass, setAddClass] = useState(classes.wrapper);
+  const [open, setOpen] = useState(false);
+  const [addClass, setAddClass] = useState(false);
   const [active, setActive] = useState({
     activeLink: null,
     navLinks: [
-      { id: 1, name: "Home" },
-      { id: 2, name: "About as" },
-      { id: 3, name: "Products" },
-      { id: 4, name: "Contact" },
+      { id: 1, name: "насчет нас" },
+      { id: 2, name: "Товары" },
+      { id: 3, name: "Контакт" },
+      { id: 4, name: "область" },
     ],
   });
 
   const fixedNav = () => {
-    if (window.scrollY > 15) {
-      setAddClass(classes.wrapper + " " + classes.wrapper_change);
-    } else {
-      setAddClass(classes.wrapper);
-    }
+    window.scrollY >15 ? setAddClass(true) : setAddClass(false)
   };
 
   window.addEventListener("scroll", fixedNav);
@@ -36,35 +30,21 @@ const Navbar = () => {
 
   const toggleActiveStyles = (id) => {
     if (active.navLinks[id] === active.activeLink) {
-      return classes.nav__link + " " + classes.nav__link_active;
+      return cx(classes.nav__link, classes.nav__link_active);
     } else {
       return classes.nav__link;
     }
   };
 
-  const changeBtnFunc = () => {
-    setChangeBtn(!changeBtn);
-  };
-
   return (
-    <div className={addClass}>
+    <div className={cx(classes.wrapper, addClass && classes.wrapper_change)}>
       <div className={classes.container}>
         <div className={classes.navbar}>
           <div className={classes.logo}>
-            <img src={Logo} alt="Metallom" />
+            <img src={Logo} alt="img not found" />
           </div>
 
-          <ul
-            className={
-              classes.nav__list + " " + (changeBtn && classes.nav__list_hide)
-            }
-          >
-            <div
-              className={classes.burgerBtn + " " + classes.burgerBtnClose}
-              onClick={changeBtnFunc}
-            >
-              <CgClose className={classes.btn} />
-            </div>
+          <ul className={cx(classes.nav__list, open && classes.nav__list_hide)}>
             {active.navLinks.map(({ id, name }) => {
               return (
                 <li
@@ -74,7 +54,7 @@ const Navbar = () => {
                 >
                   <a
                     href="#pojects"
-                    onClick={changeBtnFunc}
+                    onClick={() => setOpen(!open)}
                     className={toggleActiveStyles(id)}
                   >
                     {name}
@@ -83,21 +63,12 @@ const Navbar = () => {
               );
             })}
           </ul>
-
-          <div className={classes.nav__actions}>
-            <a className={classes.socials} href="#">
-              <img width={42} src={WhatsApp} alt="WhatsApp" />
-            </a>
-            <a className={classes.socials} href="#">
-              <img width={42} src={Telegram} alt="Telegram" />
-            </a>
-            <a className={classes.socials} href="#">
-              <img width={40} src={Phone} alt="Phone" />
-            </a>
-          </div>
-
-          <div className={classes.burgerBtn} onClick={changeBtnFunc}>
-            <CgMenuRight className={classes.btn} />
+          <div className={classes.burgerBtn} onClick={() => setOpen(!open)}>
+            {!open ? (
+              <CgMenuRight className={classes.btn} />
+            ) : (
+              <CgClose className={classes.btn} />
+            )}
           </div>
         </div>
       </div>

@@ -6,8 +6,10 @@ import {
 } from "firebase/firestore";
 import firebase from "./components/firebase/firebase";
 import Cards from "./components/cards/cards";
+import Navbar from './components/Navbar/navbar'
 import Header from "./components/Header/header";
-import Products from "./components/Products/products";
+
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -22,12 +24,12 @@ function App() {
     });
     return () => unSub();
   }, []);
-  console.log(todos)
   return (
-    <React.Fragment>
-      <Products />
+    <div >
+      <Navbar/>
+      <Header/>
       <Cards todos={todos}/>
-    </React.Fragment>
+    </div>
   );
 }
 

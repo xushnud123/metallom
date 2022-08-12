@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../Navbar/navbar";
 import classes from "./header.module.scss";
 
 const Header = () => {
   return (
     <div className={classes.wrapper}>
-      <Navbar />
       <div className={classes.container}>
         <div className={classes.header__content}>
           <h1 className={classes.header__title}>
