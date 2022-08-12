@@ -8,6 +8,7 @@ import firebase from "./components/firebase/firebase";
 import Cards from "./components/cards/cards";
 import Navbar from './components/Navbar/navbar'
 import Header from "./components/Header/header";
+import YandexMap from './components/yandex-map/yandex-map'
 
 
 
@@ -25,10 +26,12 @@ function App() {
     return () => unSub();
   }, []);
   return (
-    <div >
-      <Navbar/>
-      <Header/>
-      <Cards todos={todos}/>
+    <div>
+      <Navbar />
+      <Header />
+      <Cards todos={todos} />
+      <YandexMap />
+      <Header />
     </div>
   );
 }
