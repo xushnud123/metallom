@@ -1,8 +1,9 @@
 .wrapper {
   padding: 10px 0;
   transition: all 0.5s linear;
-  background-color: #fff;
+  position: sticky;
   top: 0;
+  background-color: #fff;
   left: 0;
   width: 100%;
   .container {
@@ -201,7 +202,6 @@
 
 .wrapper_change {
   padding: 5px 0;
-  position: fixed;
   z-index: 9999;
   width: 100%;
   top: 0;
@@ -213,13 +213,13 @@
     .navbar {
       .logo {
         img {
-          width: 65px;
-          height: 65px;
+          width: 60px;
+          height: 60px;
         }
       }
       .nav__list {
         height: calc(100% - 78.5px);
-        top: 78.5px;
+        top: 73.5px;
       }
     }
   }
