@@ -2,7 +2,7 @@
   padding: 10px 0 ;
   transition: all 0.5s linear;
   background-color: #fff;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -58,13 +58,16 @@
             transition: all .3s linear;
 
             &:hover{
+              color: var(--main-color);
               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             }
             &:last-child{
               margin-left: 15px;
             }
           }
-
+          @media (max-width:880px) and (min-width:755px) {
+            margin-left: 30px;
+          }
           @media (max-width:400px) {
             margin-right: 20px;
           }
@@ -96,6 +99,9 @@
             @media (max-width: 950px) {
               font-size: 18px;
             }
+            @media (max-width:880px){
+              font-size: 16px;
+            }
             @media (max-width: 755px) {
               font-weight: 500;
               letter-spacing: 2px;
@@ -120,6 +126,9 @@
           @media (max-width: 950px) {
             margin-right: 35px;
           }
+          @media (max-width:880px) {
+            margin-right: 20px;
+          }
           @media (max-width: 755px) {
             margin-right: 0;
           }
@@ -136,35 +145,13 @@
           display: flex;
           justify-content: center;
           transition: all 0.4s linear;
-          z-index: 100;
+          // z-index: 9999;
         }
       }
 
       .nav__list_hide {
         transform: translateX(0%);
         transition: all 0.4s linear;
-      }
-
-      .nav__actions {
-        display: flex;
-        align-items: center;
-        .socials {
-          transition: transform 0.2s linear;
-          &:hover {
-            transform: scale(1.1);
-          }
-
-          @media (max-width: 440px) {
-            width: 35px;
-          }
-        }
-        .socials:not(:first-child) {
-          margin-left: 20px;
-
-          @media (max-width: 1000px) {
-            margin-left: 12px;
-          }
-        }
       }
 
       .burgerBtn {
@@ -204,7 +191,7 @@
 
 .wrapper_change {
   padding: 5px 0;
-  position: fixed;
+  // position: fixed;
   z-index: 9999;
   width: 100%;
   top: 0;
