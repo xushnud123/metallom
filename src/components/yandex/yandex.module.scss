@@ -1,0 +1,66 @@
+.wrapper {
+  margin-bottom: 100px;
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  margin: 0 auto 100px auto;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  @media screen and (max-width: 576px) {
+    height: 550px !important;
+    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
+    padding: 0;
+  }
+  .cart {
+    width: 100%;
+    transform: translateY(-600px);
+    height: 600px !important;
+    @media screen and (max-width: 576px) {
+      height: 550px !important;
+    }
+  }
+  .row {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 30px;
+    height: 100%;
+    background: transparent;
+    transition: all linear 0.225s;
+    .btn {
+      width: 100%;
+      margin-top: 40px;
+      margin-right: 50px;
+      display: flex;
+      justify-content: flex-end;
+      color: transparent;
+      font-size: 35px;
+      transition: all linear 0.225s;
+      svg {
+        width: 35px;
+        cursor: pointer;
+      }
+    }
+    &.active {
+      display: none;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      left: 0;
+    }
+  }
+  &:hover {
+    .row {
+      background: rgba(0, 0, 0, 0.35);
+      svg {
+        color: #fff;
+      }
+    }
+  }
+}

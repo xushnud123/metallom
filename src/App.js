@@ -7,6 +7,7 @@ import Header from "./components/Header/header";
 import YandexMap from "./components/yandex-map/yandex-map";
 import Gallery from "./components/Gallery/gallery";
 import Contact from "./components/contact/contact";
+import Yandex from "./components/yandex/yandex";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -28,6 +29,7 @@ function App() {
       <Cards todos={todos} />
       <Gallery />
       <YandexMap />
+      <Yandex/>
       <Contact/>
       <Header />
     </div>
