@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import cx from "classnames";
+import React from "react";
 import classes from "./map.module.scss";
 
 const YandexMap = () => {
-  const [active, setActive] = useState(false);
 
   return (
     <div className={classes.wrapper}>
