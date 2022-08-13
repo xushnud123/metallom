@@ -8,6 +8,7 @@ import YandexMap from "./components/yandex-map/yandex-map";
 import Gallery from "./components/Gallery/gallery";
 import Contact from "./components/contact/contact";
 import Yandex from "./components/yandex/yandex";
+import Footer from "./components/footer/footer";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -31,7 +32,7 @@ function App() {
       <YandexMap />
       <Yandex/>
       <Contact/>
-      <Header />
+      <Footer/>
     </div>
   );
 }

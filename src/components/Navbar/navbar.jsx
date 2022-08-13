@@ -4,8 +4,6 @@ import classes from "./navbar.module.scss";
 import Logo from "../../assets/images/Union.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
-import { TbBrandTelegram, TbPhoneCall } from "react-icons/tb";
-import { FiPhoneCall } from "react-icons/fi";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -45,37 +43,26 @@ const Navbar = () => {
           <div className={classes.logo}>
             <img src={Logo} alt="img not found" />
           </div>
-          <div className={classes.nav__right}>
-            <ul
-              className={cx(classes.nav__list, open && classes.nav__list_hide)}
-            >
-              {active.navLinks.map(({ id, name }) => {
-                return (
-                  <li
-                    className={classes.nav__item}
-                    onClick={() => toggleActive(id)}
-                    key={id}
+
+          <ul className={cx(classes.nav__list, open && classes.nav__list_hide)}>
+            {active.navLinks.map(({ id, name }) => {
+              return (
+                <li
+                  className={classes.nav__item}
+                  onClick={() => toggleActive(id)}
+                  key={id}
+                >
+                  <a
+                    href="#pojects"
+                    onClick={() => setOpen(!open)}
+                    className={toggleActiveStyles(id)}
                   >
-                    <a
-                      href="#pojects"
-                      onClick={() => setOpen(!open)}
-                      className={toggleActiveStyles(id)}
-                    >
-                      {name}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className={classes.communication}>
-              <a className={classes.link} href="#">
-                <TbBrandTelegram />
-              </a>
-              <a className={classes.link} href="#">
-                <FiPhoneCall />
-              </a>
-            </div>
-          </div>
+                    {name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
           <div className={classes.burgerBtn} onClick={() => setOpen(!open)}>
             {!open ? (
               <CgMenuRight className={classes.btn} />
