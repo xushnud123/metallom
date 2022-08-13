@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
-import {
-  collection,
-  query,
-  onSnapshot,
-} from "firebase/firestore";
+import { collection, query, onSnapshot } from "firebase/firestore";
 import firebase from "./components/firebase/firebase";
 import Cards from "./components/cards/cards";
-import Navbar from './components/Navbar/navbar'
+import Navbar from "./components/Navbar/navbar";
 import Header from "./components/Header/header";
-import YandexMap from './components/yandex-map/yandex-map'
-
-
+import YandexMap from "./components/yandex-map/yandex-map";
+import Gallery from "./components/Gallery/gallery";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -30,6 +25,7 @@ function App() {
       <Navbar />
       <Header />
       <Cards todos={todos} />
+      <Gallery />
       <YandexMap />
       <Header />
     </div>
