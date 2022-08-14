@@ -5,6 +5,8 @@ import classes from "./navbar.module.scss";
 import Logo from "../../assets/images/Union.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
+import { FiPhoneCall } from "react-icons/fi";
+import { TbBrandTelegram } from "react-icons/tb";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -75,6 +77,15 @@ const Navbar = () => {
               );
             })}
           </ul>
+
+          <div className={classes.comunication__btns}>
+            <a href="">
+              <TbBrandTelegram />
+            </a>
+            <a href="">
+              <FiPhoneCall />
+            </a>
+          </div>
           <div className={classes.burgerBtn} onClick={() => setOpen(!open)}>
             {!open ? (
               <CgMenuRight className={classes.btn} />
