@@ -9,7 +9,7 @@
     box-sizing: border-box;
     font-size: 42px;
     line-height: 56px;
-    font-weight: 700;
+    font-weight: 500;
     color: #000;
     text-align: center;
     @media screen and (max-width: 576px) {
@@ -40,12 +40,16 @@
         font-size: 32px;
         line-height: 1.1em;
         text-align: center;
+        @media screen and (max-width: 576px) {
+          font-size: 25px;
+        }
       }
       .wrap {
         display: flex;
         margin-top: 40px;
         gap: 15px;
         .header {
+          text-decoration: none;
           padding: 5px;
           background: #36dbe5;
           color: #fff;
@@ -231,6 +235,9 @@
     @media screen and (max-width: 800px) {
       grid-gap: 30px;
       grid-template-columns: repeat(1, 1fr);
+    }
+    @media screen and (max-width: 576px) {
+      margin-top: 50px;
     }
   }
   @media screen and (max-width: 425px) {
