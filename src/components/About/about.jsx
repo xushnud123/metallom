@@ -20,7 +20,7 @@ const About = () => {
   ];
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="1">
       <h2 className={classes.title}>Демонтаж металлолома</h2>
       <ul className={classes.text__content}>
         {data.map((item, index) => {

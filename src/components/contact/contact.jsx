@@ -29,7 +29,7 @@ const Contact = () => {
                 <BsArrowRight className={classes.arrowicon} />
               </a>
               <a href="tel:+7967 034-18-31" className={classes.btn_a}>
-                +(998) 99 882 06 41
+                + (7 967) 034-18-31
               </a>
             </div>
             <div className={classes.btn_wrap}>
@@ -42,12 +42,12 @@ const Contact = () => {
               </a>
             </div>
             <div className={classes.btn_wrap}>
-              <a href="" className={classes.btn}>
+              <a href="tel:+7967 034-18-31" className={classes.btn}>
                 <span>Telegram</span>
                 <BsArrowRight className={classes.arrowicon} />
               </a>
               <a href="https://t.me/S-Metallom" className={classes.btn_a}>
-                +(998) 99 882 06 41
+                + (7 967) 034-18-31
               </a>
             </div>
             <div className={classes.btn_wrap}>

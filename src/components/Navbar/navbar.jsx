@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import { Link, animateScroll as scroll, animateScroll } from "react-scroll";
+import { Link } from "react-scroll";
 import cx from "classnames";
 import classes from "./navbar.module.scss";
 import Logo from "../../assets/images/Union.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
 import { FiPhoneCall } from "react-icons/fi";
-import { TbBrandTelegram } from "react-icons/tb";
+import { ImWhatsapp } from "react-icons/im";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [addClass, setAddClass] = useState(false);
-  const scroll = animateScroll;
   const [active, setActive] = useState({
     activeLink: null,
     navLinks: [
@@ -40,9 +39,6 @@ const Navbar = () => {
     }
   };
 
-  const scrollTo = () => {
-    scroll.scrollTo(100);
-  };
 
   return (
     <div className={cx(classes.wrapper, addClass && classes.wrapper_change)}>
@@ -61,12 +57,9 @@ const Navbar = () => {
                 >
                   <Link
                     to={`${id}`}
-                    smooth
                     activeClass="active"
-                    offset={0}
-                    delay={0}
-                    duration={2000}
-                    type="button"
+                    smooth
+                    spy
                     ignoreCancelEvents={true}
                     onClick={() => setOpen(!open)}
                     className={toggleActiveStyles(id)}
@@ -79,10 +72,10 @@ const Navbar = () => {
           </ul>
 
           <div className={classes.comunication__btns}>
-            <a href="">
-              <TbBrandTelegram />
+            <a href="https://wa.me/79670341831">
+              <ImWhatsapp />
             </a>
-            <a href="">
+            <a href="tel:+7967 034-18-31">
               <FiPhoneCall />
             </a>
           </div>

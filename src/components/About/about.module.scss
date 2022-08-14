@@ -4,7 +4,7 @@
   max-width: 1360px;
   padding: 30px 30px;
   position: relative;
-  background-color: #fff;
+  background-color: var(--white-color);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
   .title{
@@ -21,7 +21,7 @@
       display: block;
       width: 15%;
       height: 2px;
-      background-color: var(--main-color);
+      background-color: var(--color-red);
       position: absolute;
     }
 
@@ -88,7 +88,7 @@
     margin-bottom: 10px;
 
     span{
-      color:#21b0b7;
+      color: var(--color-red);
     }
   }
 

@@ -1,5 +1,5 @@
 import classes from "./foooter.module.scss";
-import logo from '../../assets/images/Union.svg'
+import logo from "../../assets/images/Union.svg";
 
 const Footer = () => {
   return (
@@ -7,8 +7,8 @@ const Footer = () => {
       <div className={classes.container}>
         <div className={classes.row}>
           <img src={logo} alt="img not found" />
-          <a href="#" >Tel: +(998) 99 882 06 41</a>
-          <p>&copy; 2022 Xushnud, Все права защищены</p>
+          <a href="tel:+7967 034-18-31">Tel: + (7 967) 034-18-31</a>
+          <p>&copy; 2022 "S-Metallom", Все права защищены</p>
         </div>
       </div>
     </div>

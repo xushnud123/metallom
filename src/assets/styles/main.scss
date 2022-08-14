@@ -1,0 +1,6 @@
+@import "./color" ;
+@import "./global";
+
+:root {
+  @include theme-light;
+}
