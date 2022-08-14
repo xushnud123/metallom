@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, animateScroll as scroll, animateScroll } from "react-scroll";
 import cx from "classnames";
 import classes from "./navbar.module.scss";
 import Logo from "../../assets/images/Union.svg";
@@ -8,6 +9,7 @@ import { CgClose } from "react-icons/cg";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [addClass, setAddClass] = useState(false);
+  const scroll = animateScroll;
   const [active, setActive] = useState({
     activeLink: null,
     navLinks: [
@@ -36,6 +38,10 @@ const Navbar = () => {
     }
   };
 
+  const scrollTo = () => {
+    scroll.scrollTo(100);
+  };
+
   return (
     <div className={cx(classes.wrapper, addClass && classes.wrapper_change)}>
       <div className={classes.container}>
@@ -43,7 +49,6 @@ const Navbar = () => {
           <div className={classes.logo}>
             <img src={Logo} alt="img not found" />
           </div>
-
           <ul className={cx(classes.nav__list, open && classes.nav__list_hide)}>
             {active.navLinks.map(({ id, name }) => {
               return (
@@ -52,13 +57,20 @@ const Navbar = () => {
                   onClick={() => toggleActive(id)}
                   key={id}
                 >
-                  <a
-                    href="#pojects"
+                  <Link
+                    to={`${id}`}
+                    smooth
+                    activeClass="active"
+                    offset={0}
+                    delay={0}
+                    duration={2000}
+                    type="button"
+                    ignoreCancelEvents={true}
                     onClick={() => setOpen(!open)}
                     className={toggleActiveStyles(id)}
                   >
                     {name}
-                  </a>
+                  </Link>
                 </li>
               );
             })}

@@ -25,6 +25,7 @@
       box-sizing: border-box;
       transition: all linear 0.225s;
       height: 430px;
+      background: #fff;
       .header {
         overflow: hidden;
         width: 100%;
@@ -37,7 +38,8 @@
         }
       }
       .body {
-        border: 1.5px solid #000;
+        // border: 1.5px solid #000;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

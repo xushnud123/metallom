@@ -34,14 +34,14 @@ const Header = () => {
             threshold={0.1}
             rootMargin="20%"
           >
-            Vastrum trancom - Your trusted provider
+            Честность всегда на первом месте в бизнесе "S-металлом"
           </AnimatedText>
           <p className={classes.header__text}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et
-            excepturi nesciunt at alias nihil.
+            "S-металлом" занимается куплей-продажей металлов в Москве уже 10
+            лет. Мы заберем металлы с вашего адреса и оплатим на месте.
           </p>
           <button className={classes.header__btn}>
-            <span>Find out more</span>
+            <span>Связаться с нами</span>
             <BsArrowRight className={classes.arrowicon} />
           </button>
         </div>

@@ -9,7 +9,7 @@
     box-sizing: border-box;
     font-size: 42px;
     line-height: 56px;
-    font-weight: 700;
+    font-weight: 500;
     color: #000;
     text-align: center;
     @media screen and (max-width: 576px) {
@@ -27,20 +27,29 @@
     box-sizing: border-box;
     .left {
       width: 100%;
-      border: 1.4px solid #000;
+      background: #fff;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       padding: 50px;
+      transition: all linear 0.225s;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
       .location {
         font-weight: 400;
         color: #101010;
         font-size: 32px;
         line-height: 1.1em;
         text-align: center;
+        @media screen and (max-width: 576px) {
+          font-size: 25px;
+        }
       }
       .wrap {
         display: flex;
         margin-top: 40px;
         gap: 15px;
         .header {
+          text-decoration: none;
           padding: 5px;
           background: #36dbe5;
           color: #fff;
@@ -63,9 +72,9 @@
           &:hover {
             color: #36dbe5;
           }
-           @media screen and (max-width: 425px) {
+          @media screen and (max-width: 425px) {
             padding-right: 0;
-           }
+          }
         }
       }
       .body {
@@ -150,10 +159,10 @@
             @media screen and (max-width: 970px) {
               padding: 15px 25px;
             }
-             @media screen and (max-width: 500px) {
-                width: 160px;
-                padding: 15px 15px;
-             }
+            @media screen and (max-width: 500px) {
+              width: 160px;
+              padding: 15px 15px;
+            }
             @media (max-width: 370px) {
               padding: 15px 40px;
             }
@@ -169,7 +178,7 @@
               font-size: 17px;
             }
             @media screen and (max-width: 450px) {
-                font-size: 15px;
+              font-size: 15px;
             }
             &:hover {
               color: #36dbe5;
@@ -227,8 +236,11 @@
       grid-gap: 30px;
       grid-template-columns: repeat(1, 1fr);
     }
+    @media screen and (max-width: 576px) {
+      margin-top: 50px;
+    }
   }
-   @media screen and (max-width: 425px) {
+  @media screen and (max-width: 425px) {
     padding: 0 15px;
-   }
+  }
 }
