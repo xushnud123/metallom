@@ -9,6 +9,7 @@ import Gallery from "./components/Gallery/gallery";
 import Contact from "./components/contact/contact";
 import Yandex from "./components/yandex/yandex";
 import Footer from "./components/footer/footer";
+import About from "./components/About/about";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -27,12 +28,13 @@ function App() {
     <div>
       <Navbar />
       <Header />
+      <About />
       <Cards todos={todos} />
       <Gallery />
       <YandexMap />
-      <Yandex/>
-      <Contact/>
-      <Footer/>
+      <Yandex />
+      <Contact />
+      <Footer />
     </div>
   );
 }
