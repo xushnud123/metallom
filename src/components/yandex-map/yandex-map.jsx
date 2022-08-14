@@ -6,7 +6,7 @@ import classes from "./map.module.scss";
 const YandexMap = () => {
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="4">
       <h1 className={classes.title}>
         Границы нашей деятельности на <span>карте</span>
       </h1>
@@ -20,7 +20,10 @@ const YandexMap = () => {
             <ImLocation2 /> в Московской области
           </span>
         </p>
-        <a href="https://yandex.uz/maps/-/CCURRTTogB" className={cx(classes.link,classes.links)}>
+        <a
+          href="https://yandex.uz/maps/-/CCURRTTogB"
+          className={cx(classes.link, classes.links)}
+        >
           Наш адресс
           <span>
             <ImLocation2 /> Ленинский городской район Московской области

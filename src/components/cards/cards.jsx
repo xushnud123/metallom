@@ -3,7 +3,7 @@ import img from "../../assets/images/header-img-3.jpg";
 
 const Cards = ({ todos }) => {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="2">
       <h1 className={classes.name}>Продукты, которые мы покупаем и продаем.</h1>
       <div className={classes.cards}>
         {todos.map((item) => (
