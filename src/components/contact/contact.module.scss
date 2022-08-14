@@ -188,6 +188,17 @@
           @media screen and (max-width: 970px) {
             margin-left: 0;
           }
+          @media screen and (max-width: 576px) {
+            margin-top: 20px;
+            &:nth-child(4){
+              .btn{
+                width: 100%;
+                justify-content: center;
+              }
+              flex-direction: column;
+              gap: 20px;
+            }
+          }
         }
       }
       @media screen and (max-width: 1300px) {
