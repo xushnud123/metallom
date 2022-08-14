@@ -25,7 +25,7 @@ const Header = () => {
               scale: 1.1,
               ease: "ease-in-out",
             }}
-            animationType="diagonal"
+            animationType="bounce"
             interval={0.06}
             duration={0.8}
             tag="p"
