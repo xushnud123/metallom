@@ -12,6 +12,8 @@ import lom from "../../assets/images/m/lom-min.jpg";
 import alumin from "../../assets/images/m/aluminy.png";
 import latun from "../../assets/images/m/latun.webp";
 import akk from "../../assets/images/m/car_batteries_mockup_perspective.png";
+import med1 from '../../assets/images/m/med1.jpeg'
+import med2 from "../../assets/images/m/med2.jpeg";
 
 const imgHandler = (id) => {
   switch (String(id)) {
@@ -19,26 +21,30 @@ const imgHandler = (id) => {
       return stal;
     case "2":
       return nikel;
-    case "3":
+    case "Бронза":
       return bronza;
-    case "4":
+    case "Нержавейка":
       return ner;
-    case "5":
+    case "Кабель":
       return kabel;
     case "6":
       return elektr;
-    case "7":
+    case "Свинец":
       return svi;
-    case "8":
+    case "Цинк":
       return sink;
-    case "9":
+    case "Черный Лом":
       return lom;
-    case "10":
+    case "Алюминий":
       return alumin;
-    case "11":
+    case "Латунь":
       return latun;
-    case "12":
+    case "Аккумуляторы":
       return akk;
+    case "Медь блестящая":
+      return med1;
+    case "Медь сварочник":
+      return med2;
     default:
       return stal;
   }
@@ -49,10 +55,10 @@ const Cards = ({ todos }) => {
     <div className={classes.wrapper} id="2">
       <h1 className={classes.name}>Продукты, которые мы покупаем и продаем.</h1>
       <div className={classes.cards}>
-        {todos.map((item, id) => (
+        {todos.map((item) => (
           <div key={item.title} className={classes.card}>
             <div className={classes.header}>
-              <img src={imgHandler(id + 1)} alt="img not found" />
+              <img src={imgHandler(item.title)} alt="img not found" />
             </div>
             <div className={classes.body}>
               <div className={classes.wrap}>
