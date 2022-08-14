@@ -6,6 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 import Img1 from "../../assets/images/header-img-1.png";
 import Img2 from "../../assets/images/header-img-2.jpg";
 import Img3 from "../../assets/images/header-img-3.jpg";
+import { Link } from "react-scroll/modules";
 
 const Header = () => {
   return (
@@ -40,10 +41,17 @@ const Header = () => {
             "S-металлом" занимается куплей-продажей металлов в Москве уже 10
             лет. Мы заберем металлы с вашего адреса и оплатим на месте.
           </p>
-          <button className={classes.header__btn}>
+          <Link
+            to="3"
+            spy
+            smooth
+            offset={0}
+            duration={2000}
+            className={classes.header__btn}
+          >
             <span>Связаться с нами</span>
             <BsArrowRight className={classes.arrowicon} />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

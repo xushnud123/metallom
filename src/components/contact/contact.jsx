@@ -51,12 +51,18 @@ const Contact = () => {
               </a>
             </div>
             <div className={classes.btn_wrap}>
-              <a href="#" className={classes.btn}>
+              <a
+                href="mailto:sunatrayimovich@gmail.com"
+                className={classes.btn}
+              >
                 <span>Email</span>
                 <BsArrowRight className={classes.arrowicon} />
               </a>
-              <a href="#" className={classes.btn_a}>
-                sunnat@gmail.com
+              <a
+                href="mailto:sunatrayimovich@gmail.com"
+                className={classes.btn_a}
+              >
+                sunatrayimovich@gmail.com
               </a>
             </div>
           </div>
