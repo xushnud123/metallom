@@ -53,12 +53,14 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             color: #000;
-            transition: all 0.2s linear;
+            transition: all 0.225s linear;
             padding-bottom: 5px;
             text-decoration: none;
             text-align: center;
+            border-bottom:2px solid transparent;
             &:hover {
               color: var(--color-red);
+              border-color: var(--color-red);
             }
             &:active{
               color: var(--color-red);
@@ -70,6 +72,7 @@
               font-weight: 500;
               letter-spacing: 2px;
               font-size: 18px;
+              padding:0 5px 5px 5px;
             }
           }
           .nav__link_active {
@@ -216,4 +219,5 @@
 
 :global(.active){
   color: var(--color-red) !important;
+  border-color: var(--color-red) !important;
 }

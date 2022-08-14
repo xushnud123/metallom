@@ -21,28 +21,30 @@ const About = () => {
 
   return (
     <div className={classes.wrapper} id="1">
-      <h2 className={classes.title}>Демонтаж металлолома</h2>
-      <ul className={classes.text__content}>
-        {data.map((item, index) => {
-          return (
-            <li key={index} className={classes.text}>
-              {item}
-            </li>
-          );
-        })}
-      </ul>
-      <p className={classes.text__two}>
-        Наши <span>услуги</span> включают в себя:
-      </p>
-      <ul className={classes.text__content_two}>
-        {data2.map((item, index) => {
-          return (
-            <li key={index} className={classes.text}>
-              {index + 1}) {item}
-            </li>
-          );
-        })}
-      </ul>
+      <div className={classes.container}>
+        <h2 className={classes.title}>Демонтаж металлолома</h2>
+        <ul className={classes.text__content}>
+          {data.map((item, index) => {
+            return (
+              <li key={index} className={classes.text}>
+                {item}
+              </li>
+            );
+          })}
+        </ul>
+        <p className={classes.text__two}>
+          Наши <span>услуги</span> включают в себя:
+        </p>
+        <ul className={classes.text__content_two}>
+          {data2.map((item, index) => {
+            return (
+              <li key={index} className={classes.text}>
+                {index + 1}) {item}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

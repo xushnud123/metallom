@@ -6,7 +6,7 @@ import img from "../../assets/images/header-img-1.png";
 
 const Contact = () => {
   return (
-    <div className={classes.wrapper} id="3">
+    <div className={classes.wrapper} id="4">
       <h1 className={classes.title}>Контакт</h1>
       <div className={classes.container}>
         <div className={classes.left}>

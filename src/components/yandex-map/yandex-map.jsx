@@ -6,7 +6,7 @@ import classes from "./map.module.scss";
 const YandexMap = () => {
 
   return (
-    <div className={classes.wrapper} id="4">
+    <div className={classes.wrapper} id="3">
       <h1 className={classes.title}>
         Границы нашей деятельности на <span>карте</span>
       </h1>

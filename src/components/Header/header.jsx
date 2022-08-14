@@ -42,9 +42,10 @@ const Header = () => {
             лет. Мы заберем металлы с вашего адреса и оплатим на месте.
           </p>
           <Link
-            to="3"
+            to="4"
             spy
             smooth
+            delay={0}
             offset={0}
             duration={2000}
             className={classes.header__btn}
