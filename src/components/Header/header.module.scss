@@ -9,7 +9,7 @@
       rgba(0, 0, 0, 0.484),
       rgba(0, 0, 0, 0.747)
     );
-    margin-top: -78.5px;
+    margin-top: -83px;
   .container {
     width: 100%;
     max-width: 1260px;
@@ -61,6 +61,7 @@
         @media (max-width: 370px) {
           margin-bottom: 30px;
           font-size: 16px;
+          line-height: 25px;
         }
       }
 
