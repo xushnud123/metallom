@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 import classes from "./contact.module.scss";
-import img from '../../assets/images/header-img-1.png'
+import img from "../../assets/images/header-img-1.png";
 
 const Contact = () => {
   return (
@@ -24,37 +24,37 @@ const Contact = () => {
           </div>
           <div className={classes.body}>
             <div className={classes.btn_wrap}>
-              <button className={classes.btn}>
+              <a href="tel:+7967 034-18-31" className={classes.btn}>
                 <span>Телефон</span>
                 <BsArrowRight className={classes.arrowicon} />
-              </button>
-              <a href="#" className={classes.btn_a}>
+              </a>
+              <a href="tel:+7967 034-18-31" className={classes.btn_a}>
                 +(998) 99 882 06 41
               </a>
             </div>
             <div className={classes.btn_wrap}>
-              <button className={classes.btn}>
+              <a href="https://wa.me/79670341831" className={classes.btn}>
                 <span>WhatsApp</span>
                 <BsArrowRight className={classes.arrowicon} />
-              </button>
-              <a href="#" className={classes.btn_a}>
-                +(998) 99 882 06 41
+              </a>
+              <a href="https://wa.me/79670341831" className={classes.btn_a}>
+                + (7 967) 034-18-31
               </a>
             </div>
             <div className={classes.btn_wrap}>
-              <button className={classes.btn}>
+              <a href="" className={classes.btn}>
                 <span>Telegram</span>
                 <BsArrowRight className={classes.arrowicon} />
-              </button>
-              <a href="#" className={classes.btn_a}>
+              </a>
+              <a href="https://t.me/S-Metallom" className={classes.btn_a}>
                 +(998) 99 882 06 41
               </a>
             </div>
             <div className={classes.btn_wrap}>
-              <button className={classes.btn}>
+              <a href="#" className={classes.btn}>
                 <span>Email</span>
                 <BsArrowRight className={classes.arrowicon} />
-              </button>
+              </a>
               <a href="#" className={classes.btn_a}>
                 sunnat@gmail.com
               </a>
