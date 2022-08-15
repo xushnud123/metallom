@@ -3,16 +3,16 @@ import img from "../../assets/images/header-img-3.jpg";
 import stal from "../../assets/images/m/stal.webp";
 import nikel from "../../assets/images/m/nicel-min.jpg";
 import bronza from "../../assets/images/m/bronza.png";
-import ner from "../../assets/images/m/nerjaveyka.png";
-import kabel from "../../assets/images/m/mis kabel.webp";
+import ner from "../../assets/images/m/nerjaveyka2.png";
+import cable from "../../assets/images/m/cable.jpg";
 import elektr from "../../assets/images/m/motor-min.jpg";
-import svi from "../../assets/images/m/svi.png";
-import sink from "../../assets/images/m/sink.webp";
+import svi from "../../assets/images/m/svi2.png";
+import sink from "../../assets/images/m/sink.jpg";
 import lom from "../../assets/images/m/lom-min.jpg";
 import alumin from "../../assets/images/m/aluminy.png";
-import latun from "../../assets/images/m/latun.webp";
-import akk from "../../assets/images/m/car_batteries_mockup_perspective.png";
-import med1 from '../../assets/images/m/med1.jpeg'
+import latun from "../../assets/images/m/latun.jpg";
+import akumulyator from "../../assets/images/m/akumulyator.png";
+import med1 from "../../assets/images/m/med1.jpeg";
 import med2 from "../../assets/images/m/med2.jpeg";
 
 const imgHandler = (id) => {
@@ -26,7 +26,7 @@ const imgHandler = (id) => {
     case "Нержавейка":
       return ner;
     case "Кабель":
-      return kabel;
+      return cable;
     case "6":
       return elektr;
     case "Свинец":
@@ -40,7 +40,7 @@ const imgHandler = (id) => {
     case "Латунь":
       return latun;
     case "Аккумуляторы":
-      return akk;
+      return akumulyator;
     case "Медь блестящая":
       return med1;
     case "Медь сварочник":
